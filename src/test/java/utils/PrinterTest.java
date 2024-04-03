@@ -5,7 +5,8 @@ import static utils.Printer.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class printerTest {
+@DisplayName("출력 함수 테스트")
+class PrinterTest {
 
 	@Test()
 	@DisplayName("2차원 배열(int[][]) 출력 테스트")
