@@ -12,7 +12,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 @DisplayName("Subarray Sum Equals K - Brute Force Solution")
 class BruteForceTest {
 	private final BruteForce bruteForce = new BruteForce();
-	private static final TestCases testCases = new TestCases();
+	private final TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@MethodSource("provideTestCases")

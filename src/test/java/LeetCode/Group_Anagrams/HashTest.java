@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 @DisplayName("Group Anagrams - Hash Solution")
 class HashTest {
 	private final Hash hash = new Hash();
-	private static final TestCases testCases = new TestCases();
+	private final TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@MethodSource("testCase")

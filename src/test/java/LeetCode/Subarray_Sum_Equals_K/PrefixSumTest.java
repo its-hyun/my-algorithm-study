@@ -12,7 +12,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 @DisplayName("Subarray Sum Equals K - Prefix Sum Solution")
 class PrefixSumTest {
 	private final PrefixSum prefixSum = new PrefixSum();
-	private static final TestCases testCases = new TestCases();
+	private final TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@MethodSource("provideTestCases")

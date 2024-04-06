@@ -14,7 +14,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 class BFSTest {
 
 	private final BFS bfs = new BFS();
-	private final static TestCases testCases = new TestCases();
+	private final TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@MethodSource("testCase")

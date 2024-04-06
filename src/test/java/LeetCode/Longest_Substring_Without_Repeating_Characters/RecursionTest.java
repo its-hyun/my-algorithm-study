@@ -4,14 +4,16 @@ import static org.assertj.core.api.Assertions.*;
 
 import java.util.stream.Stream;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+@DisplayName("Longest Substring Without Repeating Characters - Recursion Solution")
 class RecursionTest {
 
 	private final Recursion recursion = new Recursion();
-	private static final TestCases testCases = new TestCases();
+	private final TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@MethodSource("testCase")
