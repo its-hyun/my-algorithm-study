@@ -11,12 +11,12 @@ import org.junit.jupiter.params.provider.ValueSource;
 @DisplayName("Binary Tree Zigzag Level Order Traversal - BFS Solution")
 class BFSTest {
 
-	private final BFS bfs = new BFS();
-	private final TestCases testCases = new TestCases();
+	BFS bfs = new BFS();
+	TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@ValueSource(ints = {0, 1, 2})
-	void zigzagLevelOrderTest(int testCase) {
+	void zigzagLevelOrder(int testCase) {
 		List<List<Integer>> result = bfs.zigzagLevelOrder(testCases.getRoot(testCase));
 		assertThat(testCases.isAnswer(testCase, result)).isTrue();
 	}

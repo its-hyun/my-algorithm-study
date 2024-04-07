@@ -10,12 +10,12 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 @DisplayName("Group Anagrams - Hash Solution")
 class HashTest {
-	private final Hash hash = new Hash();
-	private final TestCases testCases = new TestCases();
+	Hash hash = new Hash();
+	TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@ValueSource(ints = {0, 1, 2})
-	void groupAnagramsTest(int testCase) {
+	void groupAnagrams(int testCase) {
 		List<List<String>> result = hash.groupAnagrams(testCases.getStrs(testCase));
 		boolean isAnswer = testCases.isAnswer(testCase, result);
 		assertThat(isAnswer).isTrue();

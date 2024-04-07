@@ -8,12 +8,12 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 @DisplayName("Subarray Sum Equals K - Brute Force Solution")
 class BruteForceTest {
-	private final BruteForce bruteForce = new BruteForce();
-	private final TestCases testCases = new TestCases();
+	BruteForce bruteForce = new BruteForce();
+	TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@ValueSource(ints = {0, 1, 2, 3})
-	void subarraySumTest(int testCase) {
+	void subarraySum(int testCase) {
 		int result = bruteForce.subarraySum(testCases.getNums(testCase), testCases.getK(testCase));
 		assertThat(result).isEqualTo(testCases.getAnswer(testCase));
 	}

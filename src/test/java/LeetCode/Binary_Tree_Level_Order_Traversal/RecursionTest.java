@@ -14,8 +14,8 @@ import org.junit.jupiter.params.provider.ValueSource;
 @DisplayName("Binary Tree Level Order Traversal - Recursion Solution")
 class RecursionTest {
 
-	private final Recursion recursion = new Recursion();
-	private final static TestCases testCases = new TestCases();
+	Recursion recursion = new Recursion();
+	TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@ValueSource(ints = {0, 1, 2})

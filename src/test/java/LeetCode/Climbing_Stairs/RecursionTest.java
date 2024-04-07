@@ -9,12 +9,12 @@ import org.junit.jupiter.params.provider.ValueSource;
 @DisplayName("Climbing Stairs - Recursion Solution")
 class RecursionTest {
 
-	private final Recursion recursion = new Recursion();
-	private final TestCases testCases = new TestCases();
+	Recursion recursion = new Recursion();
+	TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@ValueSource(ints = {0, 1, 2})
-	void climbStairsTest(int testCase) {
+	void climbStairs(int testCase) {
 		int result = recursion.climbStairs(testCases.getN(testCase));
 		assertThat(result).isEqualTo(testCases.getAnswer(testCase));
 	}

@@ -9,8 +9,8 @@ import org.junit.jupiter.params.provider.ValueSource;
 @DisplayName("Longest Substring Without Repeating Characters - Recursion Solution")
 class RecursionTest {
 
-	private final Recursion recursion = new Recursion();
-	private final TestCases testCases = new TestCases();
+	Recursion recursion = new Recursion();
+	TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@ValueSource(ints = {0, 1, 2})

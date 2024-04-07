@@ -9,12 +9,12 @@ import org.junit.jupiter.params.provider.ValueSource;
 @DisplayName("Climbing Stairs - Memoization Solution")
 class MemoizationTest {
 
-	private final Memoization memoization = new Memoization();
-	private final TestCases testCases = new TestCases();
+	Memoization memoization = new Memoization();
+	TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@ValueSource(ints = {0, 1, 2})
-	void climbStairsTest(int testCase) {
+	void climbStairs(int testCase) {
 		int result = memoization.climbStairs(testCases.getN(testCase));
 		assertThat(result).isEqualTo(testCases.getAnswer(testCase));
 	}

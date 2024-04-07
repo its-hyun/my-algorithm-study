@@ -8,12 +8,12 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 @DisplayName("Subarray Sum Equals K - Prefix Sum Solution")
 class PrefixSumTest {
-	private final PrefixSum prefixSum = new PrefixSum();
-	private final TestCases testCases = new TestCases();
+	PrefixSum prefixSum = new PrefixSum();
+	TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@ValueSource(ints = {0, 1, 2, 3})
-	void subarraySumTest(int testCase) {
+	void subarraySum(int testCase) {
 		int result = prefixSum.subarraySum(testCases.getNums(testCase), testCases.getK(testCase));
 		assertThat(result).isEqualTo(testCases.getAnswer(testCase));
 	}

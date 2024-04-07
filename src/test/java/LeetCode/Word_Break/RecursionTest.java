@@ -9,12 +9,12 @@ import org.junit.jupiter.params.provider.ValueSource;
 @DisplayName("Subarray Sum Equals K - Prefix Sum Solution")
 class RecursionTest {
 
-	private final Recursion recursion = new Recursion();
-	private final TestCases testCases = new TestCases();
+	Recursion recursion = new Recursion();
+	TestCases testCases = new TestCases();
 
 	@ParameterizedTest
 	@ValueSource(ints = {0, 1, 2})
-	void wordBreakTest(int testCase) {
+	void wordBreak(int testCase) {
 		boolean result = recursion.wordBreak(testCases.getS(testCase), testCases.getWordDict(testCase));
 		assertThat(result).isEqualTo(testCases.getAnswer(testCase));
 	}
