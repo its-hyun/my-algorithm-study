@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestCases {
-	private String[][] strs = {{"eat", "tea", "tan", "ate", "nat", "bat"}, {""}, {"a"}};
-	private List<List<List<String>>> expectedAnswer = new ArrayList<>();
+	private final String[][] strs = {{"eat", "tea", "tan", "ate", "nat", "bat"}, {""}, {"a"}};
+	private final List<List<List<String>>> expectedAnswer = new ArrayList<>();
 
 	public TestCases() {
 		// List<List<String>> output 값을 초기화

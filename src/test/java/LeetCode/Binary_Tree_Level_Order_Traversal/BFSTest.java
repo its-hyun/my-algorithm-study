@@ -9,6 +9,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 @DisplayName("Binary Tree Level Order Traversal - BFS Solution")
 class BFSTest {
@@ -17,17 +18,9 @@ class BFSTest {
 	private final TestCases testCases = new TestCases();
 
 	@ParameterizedTest
-	@MethodSource("testCase")
-	public void levelOrderTest(int testCase) {
+	@ValueSource(ints = {0, 1, 2})
+	void levelOrderTest(int testCase) {
 		List<List<Integer>> result = bfs.levelOrder(testCases.getRoot(testCase));
 		assertThat(testCases.isAnswer(testCase, result)).isTrue();
-	}
-
-	static Stream<Arguments> testCase() {
-		return Stream.of(
-			Arguments.of(0),
-			Arguments.of(1),
-			Arguments.of(2)
-		);
 	}
 }

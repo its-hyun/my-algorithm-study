@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestCases {
-	private String[] Strings = {
+	private final String[] Strings = {
 		"leetcode",
 		"applepenapple",
 		"catsandog",
 	};
 
-	private List<List<String>> wordDicts = new ArrayList<>();
+	private final List<List<String>> wordDicts = new ArrayList<>();
 
-	private boolean[] expectedAnswer = {true, true, false};
+	private final boolean[] expectedAnswer = {true, true, false};
 
 	public TestCases() {
 		wordDicts.add(new ArrayList<>());
