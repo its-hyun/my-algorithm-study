@@ -1,7 +1,5 @@
 package LeetCode.Coin_Change_II;
 
-import java.util.Arrays;
-
 public class Recursion {
 	public int change(int amount, int[] coins) {
 		return calculateChange(amount, coins, coins.length - 1);
@@ -21,7 +19,6 @@ public class Recursion {
 		}
 
 		int exclude = calculateChange(amount, coins, currentIndex - 1);
-
 		return include + exclude;
 	}
 }

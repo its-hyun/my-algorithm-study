@@ -9,7 +9,6 @@ import java.util.TreeSet;
 class Solution {
 	public int[] solution(String[] genres, int[] plays) {
 		HashMap<String, Genre> map = new HashMap<>();
-
 		for (int i = 0; i < genres.length; i++) {
 			String key = genres[i];
 			Music music = new Music(i, plays[i]);
